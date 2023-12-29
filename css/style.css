@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+}
+
+.title {
+    text-align: center;
+    margin: 50px 30px;
+}
+
+.title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.title p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 1px;
+    padding: 10px 200px;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+}
+
+nav .navbar-brand i {
+    color: #35a22c;
+    font-size: 36px;
+}
+
+nav .navbar-brand span {
+    color: #fff;
+    font-size: 40px;
+}
+
+#portNavbar .nav-item .nav-link {
+    color: #fff;
+    transition: all .5s;
+}
+
+/* #portNavbar .navbar-nav .nav-item::before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 0;
+    background-color: #35a22c;
+} */
+
+#portNavbar .navbar-nav .nav-item::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0;
+    background-color: #35a22c;
+    transition: all .5s;
+}
+
+#portNavbar .nav-item:hover::before {
+    width: 100%;
+}
+
+#portNavbar .nav-item:hover .nav-link {
+    color: #35a22c;
+}
+
+#portNavbar .nav-item.active .nav-link {
+    color: #35a22c;
+}
+
+/* Carousel */
+#portCarouselCaptions .carousel-item>img {
+    /* height: 1332px; */
+    height: 100vh;
+    /* vh (carousel)/ vw (tiêu đề quan trọng không muốn bị rớt hàng ở các màn hình khác nhau): view port height/width (lấy kích thước của màn hình thiết bị) */
+    object-fit: cover;
+}
+
+#portCarouselCaptions .carousel-caption>img{
+    width: 140px;
+    border-radius: 50%;
+}
+
+#portCarouselCaptions .carousel-caption{
+    /* Lấy theo thằng cha gần nhất. */
+    top: 50%;
+    left:50%;
+    /* lấy khích thước của thằng con. */
+    transform: translate(-50%, -50%);
+}
+
+/* Project */
+/* !color, spacing, font-size: code rieng CSS. */
+.port__projects {
+    padding: 70px 0;
+}
